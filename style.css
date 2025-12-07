@@ -1,0 +1,231 @@
+ /* GLOBAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Smooth scrolling between sections */
+}
+
+body {
+    background-color: #0d0d0d;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    padding: 80px 10%; /* Spacing for all sections */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #222;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13, 13, 13, 0.95);
+    z-index: 1000;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #f5c56b;
+}
+
+/* TYPOGRAPHY SHARED */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #f5c56b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.section-sub {
+    color: #888;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* HOME SECTION */
+#home {
+    background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0d0d0d 70%);
+    text-align: center;
+}
+.tag {
+    background: #222;
+    color: #f5c56b;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #f5c56b;
+    margin-bottom: 20px;
+}
+.subtitle { color: #888; margin-bottom: 40px; }
+
+/* MUSIC PLAYER */
+.music-player {
+    background: #151515;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #333;
+}
+.now-playing h2 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 2rem;
+}
+.now-playing .label { color: #e74c3c; font-size: 0.8rem; font-weight: bold; }
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+.controls i { font-size: 1.5rem; cursor: pointer; color: #666; transition: 0.3s; }
+.controls i:hover { color: white; }
+.play-btn {
+    width: 60px; height: 60px;
+    background: #e74c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play-btn i { color: white; margin-left: 5px; }
+
+/* PROGRESS BAR */
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #e74c3c;
+    border-radius: 5px;
+}
+
+/* ABOUT SECTION */
+.about-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    max-width: 1000px;
+}
+.about-img img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.about-text h3 {
+    font-family: 'Playfair Display', serif;
+    color: #f5c56b;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.about-text p { color: #ccc; line-height: 1.6; }
+
+/* FEATURES SECTION */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+}
+.feature-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+.feature-card:hover { transform: translateY(-10px); border-color: #f5c56b; }
+.icon-box {
+    font-size: 2rem;
+    color: #fff;
+    background: #222;
+    width: 60px; height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.feature-card h3 { color: #f5c56b; margin-bottom: 15px; }
+.feature-card p { color: #888; font-size: 0.9rem; }
+
+/* SONGS LIST */
+.song-list { width: 100%; max-width: 600px; }
+.song-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.song-item:hover { background: #1a1a1a; color: #f5c56b; }
+
+/* GALLERY GRID */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.gallery-grid img:hover { transform: scale(1.05); }
+
+/* CONTACT FORM */
+form { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 500px; }
+input, textarea {
+    padding: 15px;
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
+}
+button {
+    padding: 15px;
+    background: #f5c56b;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}

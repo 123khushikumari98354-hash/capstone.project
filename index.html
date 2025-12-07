@@ -1,0 +1,142 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Piano</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🎄</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#songs">Songs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <i class="fas fa-gift"></i>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="hero-content">
+            <div class="tag">✨ Holiday Season 2025</div>
+            <h1 class="main-title">Christmas Piano</h1>
+            <p class="subtitle">Experience the magic of Christmas through beautiful piano<br> melodies. Play, listen, and celebrate the season.</p>
+
+            <div class="music-player">
+                <div class="now-playing">
+                    <span class="label">NOW PLAYING</span>
+                    <h2 id="song-title">Last Christmas</h2>
+                </div>
+                <div class="controls">
+                    <i class="fas fa-step-backward" onclick="prevSong()"></i>
+                    <div class="play-btn" onclick="togglePlay()">
+                        <i class="fas fa-play" id="playIcon"></i>
+                    </div>
+                    <i class="fas fa-step-forward" onclick="nextSong()"></i>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">The Joy of Christmas Music</h2>
+        <p class="section-sub">Bringing holiday cheer through the timeless sound of piano</p>
+        
+        <div class="about-container">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1552422535-c45813c61732?q=80&w=2070&auto=format&fit=crop" alt="Piano Keys">
+            </div>
+            <div class="about-text">
+                <h3>A Digital Christmas Experience</h3>
+                <p>Christmas Piano brings the warmth and nostalgia of holiday classics right to your browser. Using Web Audio technology, we've recreated the beautiful sound of piano playing your favorite Christmas songs.</p>
+                <br>
+                <p>Whether you're working, relaxing, or celebrating with family, let these melodies set the perfect holiday atmosphere. No downloads, no plugins, just press play and enjoy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-sub">Simple, beautiful, and completely browser-based</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-volume-up"></i></div>
+                <h3>Real-Time Audio</h3>
+                <p>Powered by Web Audio API for authentic piano synthesis. Each note is generated in real-time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-tv"></i></div>
+                <h3>Visual Piano</h3>
+                <p>Watch the piano keys light up as each song plays. A beautiful visualization.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-keyboard"></i></div>
+                <h3>Keyboard Play</h3>
+                <p>Play the piano yourself using your keyboard. Keys Z-M for lower octave.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="songs">
+        <h2 class="section-title">Holiday Collection</h2>
+        <div class="song-list">
+            <div class="song-item" onclick="loadSong(0)">
+                <span>01</span>
+                <span>Last Christmas</span>
+                <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="song-item" onclick="loadSong(1)">
+                <span>02</span>
+                <span>Jingle Bells</span>
+                <i class="fas fa-play-circle"></i>
+            </div>
+            <div class="song-item" onclick="loadSong(2)">
+                <span>03</span>
+                <span>Silent Night</span>
+                <i class="fas fa-play-circle"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="section-title">Festive Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1544077960-604201fe74bc?w=500" alt="Xmas 1">
+            <img src="https://images.unsplash.com/photo-1512474932049-782abb8be2e9?w=500" alt="Xmas 2">
+            <img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=500" alt="Xmas 3">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <p>Have a song request? Let us know!</p>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Christmas Piano. All rights reserved.</p>
+    </footer>
+
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
